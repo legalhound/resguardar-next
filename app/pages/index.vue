@@ -1,0 +1,222 @@
+<template>
+  <main class="home">
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">
+          Tecnología, sostenibilidad y transformación
+        </h1>
+        <p class="hero__subtitle">
+          Integramos certificación ESG, tokenización de activos,
+          inteligencia artificial y tecnologías avanzadas para organizaciones complejas.
+        </p>
+      </div>
+    </section>
+    <section class="areas">
+      <div class="container areas__grid">
+      <NuxtLink to="https://resguardar.es/" target="_blank" class="card card--esg">
+      <!-- <NuxtLink to="/esg" class="card card--esg">--> 
+        <img src="/images/logo-resguardar.png" alt="Logo" />
+        <h2>ESG & Tokenización</h2>
+        <p>
+          Certificación, sostenibilidad, trazabilidad y nuevos modelos de valor basados en activos digitales.
+        </p>
+        <ul>
+          <li>Certificaciones ESG</li>
+          <li>Huella de carbono</li>
+          <li>Tokenización de activos</li>
+          <li>Reporting verificable</li>
+        </ul>
+      </NuxtLink>
+        <NuxtLink to="/dual" class="card card--dual">
+          <img src="/images/logo-resguardar-naranja.png" alt="Logo" />
+          <h2>Tecnologías Duales</h2>
+          <p>
+            IA, automatización y sistemas avanzados para entornos operativos complejos y críticos.
+          </p>
+          <ul>
+            <li>IA aplicada</li>
+            <li>Automatización inteligente</li>
+            <li>Analítica avanzada</li>
+            <li>Soporte operativo</li>
+          </ul>
+        </NuxtLink>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="container">
+        <h2>
+          Construimos soluciones para entornos reales
+        </h2>
+        <p>
+          Organizaciones públicas y privadas confían en nuestras soluciones para mejorar decisión, eficiencia y trazabilidad.
+        </p>
+        <NuxtLink to="/contact" class="btn btn--primary">
+          Solicitar reunión
+        </NuxtLink>
+      </div>
+    </section>
+  </main>
+</template>
+<script setup>
+  definePageMeta({
+    layout: 'home'
+  })
+</script>
+
+<style scoped lang="scss">
+.home {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../public/images/background.png");
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+.hero {
+  padding: 4em;
+  text-align: center;
+  &__title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+  }
+  &__subtitle {
+    color: var(--text-secondary);
+    max-width: 800px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 0 auto;
+  }
+  &__actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+}
+.areas__grid {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 900px) {
+  .areas__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.card {
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: var(--surface);
+  text-decoration: none;
+  transition: transform .2s ease, border .2s ease;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  ul {
+    color: var(--text-secondary);
+    padding-left: 1.2rem;
+  }
+  &:hover {
+    transform: translateY(-5px);
+  }
+  &--esg {
+    border: 2px solid rgb(1, 140, 1);
+    &:hover {
+      border-color: var(--esg);
+    }
+  }
+  &--dual {
+    border: 2px solid rgb(252, 156, 66);
+    &:hover {
+      border-color: var(--dual);
+    }
+  }
+}
+.cta {
+  margin: 0 auto;
+  text-align: center;
+  padding: 6rem 0;
+  h2 {
+    font-size: 2.5rem;
+    margin: 1rem auto;
+  }
+  p {
+    margin: 0 auto;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+}
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn--esg {
+  background: var(--esg);
+  color: white;
+}
+.btn--dual {
+  background: var(--dual);
+  color: black;
+}
+.btn--primary {
+  padding: 16px 32px;
+  border: 2px solid rgb(0, 160, 0);
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    #62ff0029 0%,
+    #0ece0032 40%,
+    #ff8c0068 70%,
+    #ffb24723 100%
+  );
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 0 10px rgba(0, 255, 136, 0.162),
+    0 0 25px rgba(255, 140, 0, 0.4),
+    inset 0 0 15px rgba(255, 255, 255, 0.043);
+  &:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow:
+      0 0 15px rgba(0, 255, 136, 0.117),
+      0 0 35px rgba(255, 140, 0, 0.406),
+      0 0 60px rgba(255, 140, 0, 0.4);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -30%;
+    width: 50%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.071);
+    transform: rotate(25deg);
+    transition: 0.6s;
+  }
+  &:hover::before {
+    left: 120%;
+  }
+}
+
+
+
+</style>
