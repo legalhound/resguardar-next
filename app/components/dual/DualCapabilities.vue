@@ -1,43 +1,56 @@
 <template>
+  <section id="capacidades" class="section">
+    <div class="container">
 
-<section class="section">
+      <p class="section-label">Capacidades tecnológicas</p>
+      <div class="section-divider" />
+      <h2 class="section-title">Qué hacemos</h2>
 
-<div class="container">
+      <div class="cards">
 
-<h2 class="section-title">
-Capacidades Tecnológicas
-</h2>
+        <div class="card">
+          <div class="card-icon">
+            <i class="fa-solid fa-brain" aria-hidden="true" />
+          </div>
+          <h3>IA Aplicada</h3>
+        </div>
 
-<div class="cards">
+        <div class="card">
+          <div class="card-icon">
+            <i class="fa-solid fa-robot" aria-hidden="true" />
+          </div>
+          <h3>Automatización Inteligente</h3>
+        </div>
 
-<div class="card">
-IA Aplicada
-</div>
+        <div class="card">
+          <div class="card-icon">
+            <i class="fa-solid fa-microchip" aria-hidden="true" />
+          </div>
+          <h3>Sistemas de Soporte Operativo</h3>
+        </div>
 
-<div class="card">
-Automatización Inteligente
-</div>
+        <div class="card">
+          <div class="card-icon">
+            <i class="fa-solid fa-chart-line" aria-hidden="true" />
+          </div>
+          <h3>Analítica Avanzada</h3>
+        </div>
 
-<div class="card">
-Sistemas de Soporte Operativo
-</div>
+        <div class="card">
+          <div class="card-icon">
+            <i class="fa-solid fa-sliders" aria-hidden="true" />
+          </div>
+          <h3>Optimización</h3>
+        </div>
 
-<div class="card">
-Analítica Avanzada
-</div>
+        <div class="card">
+          <div class="card-icon">
+            <i class="fa-solid fa-route" aria-hidden="true" />
+          </div>
+          <h3>Trazabilidad y Control</h3>
+        </div>
 
-<div class="card">
-Optimización
-</div>
-
-<div class="card">
-Trazabilidad y Control
-</div>
-
-</div>
-
-</div>
-
-</section>
-
+      </div>
+    </div>
+  </section>
 </template>

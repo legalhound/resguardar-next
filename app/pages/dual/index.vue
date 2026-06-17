@@ -32,7 +32,7 @@
 <style scoped>
 .dualBG{
   background-image: url("../../../public/images/backgroundDUAL.png");
-  background-size:cover;   
+  background-size:cover; 
   background-position: center; 
   background-repeat: no-repeat;
 }

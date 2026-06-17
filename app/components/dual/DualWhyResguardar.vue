@@ -1,13 +1,10 @@
 <template>
-  <section class="section">
+  <section id="por-que-resguardar" class="section">
     <div class="container narrow">
-      <h2 class="section-title">
-        Por qué Resguardar
-      </h2>
 
-      <p class="section-subtitle">
-        Reconocimiento, confianza y legitimidad sectorial
-      </p>
+      <p class="section-label">Por qué Resguardar</p>
+      <div class="section-divider" />
+      <h2 class="section-title">Reconocimiento, confianza y legitimidad sectorial</h2>
 
       <p class="section-text">
         En Grupo Resguardar combinamos conocimiento,
@@ -17,13 +14,14 @@
       </p>
 
       <div class="tags">
-        <span>Uso práctico</span>
-        <span>Entornos complejos</span>
-        <span>Innovación aplicada</span>
-        <span>Automatización inteligente</span>
-        <span>Optimización medible</span>
-        <span>Sostenibilidad verificable</span>
+        <span class="tag">Uso práctico</span>
+        <span class="tag">Entornos complejos</span>
+        <span class="tag">Innovación aplicada</span>
+        <span class="tag">Automatización inteligente</span>
+        <span class="tag">Optimización medible</span>
+        <span class="tag">Sostenibilidad verificable</span>
       </div>
+
     </div>
   </section>
 </template>

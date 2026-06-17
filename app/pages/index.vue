@@ -13,7 +13,7 @@
     </section>
     <section class="areas">
       <div class="container areas__grid">
-      <NuxtLink to="https://resguardar.es/" target="_blank" class="card card--esg">
+      <NuxtLink to="https://resguardar.ai/" target="_blank" class="card card--esg">
       <!-- <NuxtLink to="/esg" class="card card--esg">--> 
         <img src="/images/logo-resguardar.png" alt="Logo" />
         <h2>ESG & Tokenización</h2>
@@ -27,7 +27,7 @@
           <li>Reporting verificable</li>
         </ul>
       </NuxtLink>
-        <NuxtLink to="/dual" class="card card--dual">
+        <NuxtLink to="/dual" target="_blank" class="card card--dual">
           <img src="/images/logo-resguardar-naranja.png" alt="Logo" />
           <h2>Tecnologías Duales</h2>
           <p>
@@ -125,6 +125,7 @@
   }
   &:hover {
     transform: translateY(-5px);
+    border-color: white;
   }
   &--esg {
     border: 2px solid rgb(1, 140, 1);
@@ -216,7 +217,5 @@
     left: 120%;
   }
 }
-
-
 
 </style>
