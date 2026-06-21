@@ -24,7 +24,7 @@
 
         <div class="benefit-card">
           <div class="card-icon">
-            <i class="fa-solid fa-trending-up" aria-hidden="true" />
+            <i class="fa-solid fa-gear" aria-hidden="true" />
           </div>
           <span>Mayor eficiencia en procesos críticos</span>
         </div>

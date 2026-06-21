@@ -28,7 +28,8 @@ defineProps<{
 
 .hero h1{
   font-size:4rem;
-  margin-bottom:2rem;
+  margin:0 auto 1rem auto;
+  text-align: center !important;
 }
 
 .hero p{
@@ -36,5 +37,7 @@ defineProps<{
   color:#cbd5e1;
   font-size:1.2rem;
   line-height:1.8;
+  text-align: center !important;
+  margin: 0 auto;
 }
 </style>

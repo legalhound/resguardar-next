@@ -7,81 +7,145 @@
       <h2 class="section-title">Metodología</h2>
       <p class="section-subtitle">De la necesidad operativa a la solución implantable</p>
 
-      <div class="cards">
+      <div class="timeline">
+        <div class="timeline__line" aria-hidden="true" />
 
-        <div class="card">
-          <span class="step-badge">PASO 01</span>
-          <div class="card-icon">
-            <i class="fa-solid fa-stethoscope" aria-hidden="true" />
+        <div v-for="step in steps" :key="step.num" class="timeline__step">
+          <div class="timeline__dot">
+            <i :class="`fa-solid ${step.icon}`" aria-hidden="true" />
           </div>
-          <h3>Diagnóstico</h3>
-          <p>Analizamos procesos, datos, objetivos, restricciones y puntos de fricción.</p>
+          <p class="timeline__num">{{ step.num }}</p>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.desc }}</p>
         </div>
-
-        <div class="card">
-          <span class="step-badge">PASO 02</span>
-          <div class="card-icon">
-            <i class="fa-solid fa-pen-ruler" aria-hidden="true" />
-          </div>
-          <h3>Diseño funcional</h3>
-          <p>Definimos una solución útil, comprensible y alineada con la realidad operativa.</p>
-        </div>
-
-        <div class="card">
-          <span class="step-badge">PASO 03</span>
-          <div class="card-icon">
-            <i class="fa-solid fa-code" aria-hidden="true" />
-          </div>
-          <h3>Desarrollo tecnológico</h3>
-          <p>Integramos IA, automatización y herramientas digitales adaptadas al caso de uso.</p>
-        </div>
-
-        <div class="card">
-          <span class="step-badge">PASO 04</span>
-          <div class="card-icon">
-            <i class="fa-solid fa-clipboard-check" aria-hidden="true" />
-          </div>
-          <h3>Validación</h3>
-          <p>Probamos la solución en condiciones reales o simuladas para medir rendimiento.</p>
-        </div>
-
-        <div class="card">
-          <span class="step-badge">PASO 05</span>
-          <div class="card-icon">
-            <i class="fa-solid fa-rocket" aria-hidden="true" />
-          </div>
-          <h3>Implantación</h3>
-          <p>Acompañamos la adopción, formación y evolución de la herramienta.</p>
-        </div>
-
       </div>
+
     </div>
   </section>
 </template>
 
+<script setup>
+const steps = [
+  { num: '01', icon: 'fa-stethoscope',    title: 'Diagnóstico',           desc: 'Procesos, datos y puntos de fricción' },
+  { num: '02', icon: 'fa-pen-ruler',      title: 'Diseño funcional',      desc: 'Alineado con la realidad operativa' },
+  { num: '03', icon: 'fa-code',           title: 'Desarrollo tecnológico', desc: 'IA y automatización adaptadas' },
+  { num: '04', icon: 'fa-clipboard-check',title: 'Validación',            desc: 'Condiciones reales o simuladas' },
+  { num: '05', icon: 'fa-rocket',         title: 'Implantación',          desc: 'Adopción, formación y evolución' },
+]
+</script>
+
 <style scoped>
-.step-badge {
-  display: inline-block;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: var(--accent);
+.section{
+  background-color: rgba(0, 0, 0, 0.193);
+}
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.timeline__line {
+  position: absolute;
+  top: 19px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-border),
+    var(--accent-border),
+    transparent
+  );
+}
+
+.timeline__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 8px;
+  position: relative;
+}
+
+.timeline__dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   background: var(--accent-dim);
-  border-radius: 4px;
-  padding: 3px 8px;
-  margin-bottom: 0.75rem;
+  border: 1.5px solid var(--accent-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  z-index: 1;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s;
+
+  i {
+    font-size: 16px;
+    color: var(--accent);
+  }
+
+  &:hover {
+    background: var(--accent);
+    i { color: #fff; }
+  }
+}
+
+.timeline__num {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 0.82rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
+  color: var(--text);
+  margin-bottom: 4px;
 }
 
 p {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.5;
   margin: 0;
+}
+
+@media (max-width: 700px) {
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .timeline__line {
+    top: 0; bottom: 0;
+    left: 19px; right: auto;
+    width: 1px; height: auto;
+    background: linear-gradient(
+      180deg,
+      transparent,
+      var(--accent-border),
+      var(--accent-border),
+      transparent
+    );
+  }
+
+  .timeline__step {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .timeline__dot {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
 }
 </style>

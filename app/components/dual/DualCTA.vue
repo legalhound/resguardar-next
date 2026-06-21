@@ -90,94 +90,11 @@ function handleSubmit() {
 </script>
 
 <style scoped>
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  max-width: 640px;
-  margin-top: 2.5rem;
+.section-text{
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.form-row {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 600px) {
-  .form-row {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-field label {
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-}
-
-.form-field input,
-.form-field textarea {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  color: var(--text);
-  border-radius: 10px;
-  padding: 12px 14px;
-  font-size: 0.9rem;
-  font-family: inherit;
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-
-  &::placeholder {
-    color: var(--text-secondary);
-    opacity: 0.5;
-  }
-
-  &:focus {
-    border-color: var(--accent-border);
-    box-shadow: 0 0 0 3px var(--accent-dim);
-  }
-}
-
-.form-field textarea {
-  min-height: 130px;
-  resize: vertical;
-}
-
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.chip {
-  font-size: 0.78rem;
-  font-weight: 500;
-  background: var(--surface);
-  color: var(--text-secondary);
-  border: 0.5px solid var(--border);
-  border-radius: 100px;
-  padding: 5px 14px;
-  cursor: pointer;
-  transition: all 0.15s;
-
-  &:hover {
-    border-color: var(--accent-border);
-    color: var(--accent);
-  }
-}
-
-.chip--active {
-  background: var(--accent-dim);
-  border-color: var(--accent-border);
-  color: var(--accent);
-}
 
 .btn-submit {
   width: 100%;

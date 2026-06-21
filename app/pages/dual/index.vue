@@ -31,6 +31,7 @@
 
 <style scoped>
 .dualBG{
+  text-align: center;
   background-image: url("../../../public/images/backgroundDUAL.png");
   background-size:cover; 
   background-position: center; 

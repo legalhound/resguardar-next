@@ -50,9 +50,71 @@
         <p>
           Organizaciones públicas y privadas confían en nuestras soluciones para mejorar decisión, eficiencia y trazabilidad.
         </p>
-        <NuxtLink to="/contact" class="btn btn--primary">
-          Solicitar reunión
-        </NuxtLink>
+    <form class="contact-form" @submit.prevent="handleSubmit">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="nombre">Nombre</label>
+          <input
+            id="nombre"
+            v-model="form.nombre"
+            type="text"
+            placeholder="Nombre"
+            required
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="empresa">Empresa</label>
+          <input
+            id="empresa"
+            v-model="form.empresa"
+            type="text"
+            placeholder="Nombre de la organización"
+          />
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          v-model="form.email"
+          type="email"
+          placeholder="email@empresa.com"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <label>Área de interés</label>
+        <div class="chips">
+          <button
+            v-for="chip in chips"
+            :key="chip"
+            type="button"
+            class="chip"
+            :class="{ 'chip--active': form.interes.includes(chip) }"
+            @click="toggleChip(chip)"
+          >
+            {{ chip }}
+          </button>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="mensaje">Mensaje</label>
+        <textarea
+          id="mensaje"
+          v-model="form.mensaje"
+          rows="4"
+          placeholder="Cuéntanos brevemente qué necesitas o en qué podemos ayudarte..."
+        />
+      </div>
+
+      <button type="submit" class="btn btn--primary btn-submit">
+        Solicitar reunión
+      </button>
+    </form>
       </div>
     </section>
   </main>
@@ -61,6 +123,25 @@
   definePageMeta({
     layout: 'home'
   })
+  const chips = ['ESG', 'Tecnologías Duales', 'IA Aplicada', 'Automatización', 'Otro'];
+
+  const form = reactive({
+    nombre: '',
+    empresa: '',
+    email: '',
+    interes: [],
+    mensaje: '',
+  })
+function toggleChip(chip) {
+  const i = form.interes.indexOf(chip)
+  if (i === -1) form.interes.push(chip)
+  else form.interes.splice(i, 1)
+}
+
+function handleSubmit() {
+  // TODO: conectar con el backend o servicio de email
+  console.log('Form submitted:', form)
+}
 </script>
 
 <style scoped lang="scss">
@@ -141,9 +222,11 @@
   }
 }
 .cta {
-  margin: 0 auto;
+  width: 100%;
+  margin: 6rem auto 0 auto;
   text-align: center;
-  padding: 6rem 0;
+  padding: 2rem 0;
+  background-color: rgba(0, 0, 0, 0.604);
   h2 {
     font-size: 2.5rem;
     margin: 1rem auto;
@@ -162,14 +245,6 @@
   border-radius: 12px;
   font-weight: 600;
   text-decoration: none;
-}
-.btn--esg {
-  background: var(--esg);
-  color: white;
-}
-.btn--dual {
-  background: var(--dual);
-  color: black;
 }
 .btn--primary {
   padding: 16px 32px;

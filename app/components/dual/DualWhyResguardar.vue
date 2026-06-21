@@ -1,6 +1,6 @@
 <template>
   <section id="por-que-resguardar" class="section">
-    <div class="container narrow">
+    <div class="container">
 
       <p class="section-label">Por qué Resguardar</p>
       <div class="section-divider" />
@@ -25,3 +25,9 @@
     </div>
   </section>
 </template>
+<style scoped>
+.section-text{
+  max-width: 600px;
+  margin: 0px auto;
+}
+</style>
