@@ -17,6 +17,7 @@
 <style scoped>
 .footer{
   padding:4rem 0;
-  border-top:1px solid rgba(255,255,255,.08);
+  border-top:1px solid rgb(13, 27, 42);
+  background: rgba(13, 27, 42, 0.735);
 }
 </style>

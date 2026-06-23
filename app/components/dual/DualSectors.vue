@@ -48,15 +48,15 @@ const sectors = [
 }
 
 .sr-num {
-  font-size: 0.65rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.18);
+  color:var(--accent);
   width: 28px;
   flex-shrink: 0;
 }
 
 .sr-name {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 300;
   color: var(--text);
   flex: 1;
@@ -64,7 +64,7 @@ const sectors = [
 }
 
 .sr-tag {
-  font-size: 0.72rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--accent);
   white-space: nowrap;

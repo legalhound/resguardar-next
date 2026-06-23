@@ -5,7 +5,7 @@
       <p class="section-label">Cómo trabajamos</p>
       <div class="section-divider" />
       <h2 class="section-title">Metodología</h2>
-      <p class="section-subtitle">De la necesidad operativa a la solución implantable</p>
+      <p class="section-text">De la necesidad operativa a la solución implantable</p>
 
       <div class="timeline">
         <div class="timeline__line" aria-hidden="true" />
@@ -35,9 +35,7 @@ const steps = [
 </script>
 
 <style scoped>
-.section{
-  background-color: rgba(0, 0, 0, 0.193);
-}
+
 .timeline {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -111,7 +109,7 @@ h3 {
 }
 
 p {
-  font-size: 0.75rem;
+
   color: var(--text-secondary);
   line-height: 1.5;
   margin: 0;

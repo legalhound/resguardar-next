@@ -23,12 +23,12 @@ defineProps<{
 
 <style scoped>
 .hero{
-  padding:60px 0;
+  padding:60px 0 0 0;
 }
 
 .hero h1{
   font-size:4rem;
-  margin:0 auto 1rem auto;
+  margin:0 auto;
   text-align: center !important;
 }
 

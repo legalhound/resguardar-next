@@ -55,7 +55,7 @@
           />
         </div>
 
-        <button type="submit" class="btn-primary btn-submit">
+        <button type="submit" class="btn-primary">
           <i class="fa-solid fa-paper-plane" aria-hidden="true" />
           Enviar mensaje
         </button>
@@ -84,7 +84,6 @@ function toggleChip(chip) {
 }
 
 function handleSubmit() {
-  // TODO: conectar con el backend o servicio de email
   console.log('Form submitted:', form)
 }
 </script>
@@ -96,8 +95,11 @@ function handleSubmit() {
 }
 
 
-.btn-submit {
+.btn-primary {
+  margin: 0 0 60px 0;
   width: 100%;
   justify-content: center;
+  cursor:pointer;
+  
 }
 </style>

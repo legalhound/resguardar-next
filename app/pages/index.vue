@@ -111,7 +111,7 @@
         />
       </div>
 
-      <button type="submit" class="btn btn--primary btn-submit">
+      <button type="submit" class="btn--primary">
         Solicitar reunión
       </button>
     </form>
@@ -188,7 +188,7 @@ function handleSubmit() {
 .card {
   padding: 2.5rem;
   border-radius: 20px;
-  background: var(--surface);
+  background: rgba(13, 27, 42, 0.535);
   text-decoration: none;
   transition: transform .2s ease, border .2s ease;
   h2 {
@@ -226,7 +226,7 @@ function handleSubmit() {
   margin: 6rem auto 0 auto;
   text-align: center;
   padding: 2rem 0;
-  background-color: rgba(0, 0, 0, 0.604);
+  background-color: rgba(0, 0, 0, 0.246);
   h2 {
     font-size: 2.5rem;
     margin: 1rem auto;
@@ -248,8 +248,8 @@ function handleSubmit() {
 }
 .btn--primary {
   padding: 16px 32px;
-  border: 2px solid rgb(0, 160, 0);
-  border-radius: 14px;
+  border: 2px solid rgba(0, 160, 0, 0.531);
+  border-radius: 25px;
   background: linear-gradient(
     135deg,
     #62ff0029 0%,

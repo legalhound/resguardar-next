@@ -5,7 +5,7 @@
       <p class="section-label">Capacidades tecnológicas</p>
       <div class="section-divider" />
       <h2 class="section-title">Qué hacemos</h2>
-      <p class="section-subtitle">Tecnología aplicada a los problemas reales de organizaciones complejas.</p>
+      <p class="section-text">Tecnología aplicada a los problemas reales de organizaciones complejas.</p>
 
       <!-- Marquee -->
       <div class="marquee-wrap" aria-hidden="true">
@@ -42,9 +42,7 @@ const caps = [
 </script>
 
 <style scoped>
-.section{
-  background-color: rgba(0, 0, 0, 0.193);
-}
+
 /* ── Marquee ── */
 .marquee-wrap {
   margin-top: 2.5rem;
@@ -61,8 +59,8 @@ const caps = [
     pointer-events: none;
   }
 
-  &::before { left: 0;  background: linear-gradient(90deg,  var(--bg), transparent); }
-  &::after  { right: 0; background: linear-gradient(-90deg, var(--bg), transparent); }
+  &::before { left: 0;  background: linear-gradient(90deg,  var(--blue-1), transparent); }
+  &::after  { right: 0; background: linear-gradient(-90deg, var(--blue-1), transparent); }
 }
 
 .marquee-track {
@@ -96,11 +94,6 @@ const caps = [
   cursor: default;
 
   i { color: var(--accent); font-size: 14px; }
-
-  &:hover {
-    border-color: var(--accent-border);
-    color: var(--accent);
-  }
 }
 
 /* ── Tabla ── */
@@ -109,6 +102,7 @@ const caps = [
   grid-template-columns: repeat(3, 1fr);
   margin-top: 2.5rem;
   border: 0.5px solid var(--border);
+    background-color: rgba(0, 0, 0, 0.193);
   border-radius: 18px;
   overflow: hidden;
 }
@@ -119,9 +113,6 @@ const caps = [
   border-bottom: 0.5px solid var(--border);
   transition: background 0.2s;
 
-  &:hover {
-    background: var(--accent-dim);
-  }
 
   &:nth-child(3n)   { border-right: none; }
   &:nth-child(n+4)  { border-bottom: none; }
@@ -142,7 +133,6 @@ h3 {
 }
 
 p {
-  font-size: 0.78rem;
   color: var(--text-secondary);
   line-height: 1.6;
   margin: 0;

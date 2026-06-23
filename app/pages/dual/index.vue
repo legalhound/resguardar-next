@@ -4,7 +4,6 @@
     title="Tecnología útil para entornos reales"
     subtitle="IA, automatización y sistemas avanzados para organizaciones complejas."
     color="#fc9c42"
-    class="dualBG"
   />
     <DualSectors />
     <DualCapabilities />
@@ -30,11 +29,17 @@
 </script>
 
 <style scoped>
-.dualBG{
+
+.dualBG {
   text-align: center;
-  background-image: url("../../../public/images/backgroundDUAL.png");
-  background-size:cover; 
-  background-position: center; 
+  background-image: 
+    linear-gradient(to bottom, rgba(13, 27, 42, 0.869), rgba(13, 27, 42, 0.914)),
+    url("../../../public/images/backgroundDUAL.png");
+  background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
+  background-attachment: fixed; 
+  border-bottom: 1px solid rgb(13, 27, 42);
 }
+
 </style>

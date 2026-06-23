@@ -74,15 +74,12 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: var(--surface);
+  background: var(--blue-1);
   border: 0.5px solid var(--border);
   border-radius: 16px;
   padding: 1rem 1.25rem;
   transition: border-color 0.2s ease;
 
-  &:hover {
-    border-color: var(--accent-border);
-  }
 }
 
 .benefit-card .card-icon {

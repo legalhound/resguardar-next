@@ -22,19 +22,11 @@ a {
   margin: 0 auto;
 }
 
-.narrow {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .center {
   text-align: center;
 }
-
-/* ── Secciones ── */
 .section {
-  padding: 100px 0;
+  padding: 190px 0 0 0;
 }
 
 .section-label {
@@ -62,12 +54,6 @@ a {
   margin-bottom: 0.75rem;
 }
 
-.section-subtitle {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
-}
-
 .section-text {
   color: var(--text-secondary);
   line-height: 1.8;
@@ -89,7 +75,7 @@ a {
 }
 
 .card {
-  background: var(--surface);
+  background: var(--blue-1);
   padding: 1.5rem;
   border-radius: 16px;
   border: 0.5px solid var(--border);
@@ -134,7 +120,8 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--accent);
+  background: var(--blue-2);
+  border-color: var(--blue-2);
   color: #fff;
   font-weight: 500;
   font-size: 0.95rem;
@@ -189,7 +176,7 @@ html {
 
 .form-field input,
 .form-field textarea {
-  background: var(--surface);
+  background: var(--blue-1);
   border: 0.5px solid var(--border);
   color: var(--text);
   border-radius: 10px;
@@ -224,7 +211,7 @@ html {
 .chip {
   font-size: 0.78rem;
   font-weight: 500;
-  background: var(--surface);
+  background: var(--blue-1);
   color: var(--text-secondary);
   border: 0.5px solid var(--border);
   border-radius: 100px;
