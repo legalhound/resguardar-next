@@ -139,7 +139,6 @@ function toggleChip(chip) {
 }
 
 function handleSubmit() {
-  // TODO: conectar con el backend o servicio de email
   console.log('Form submitted:', form)
 }
 </script>
@@ -168,12 +167,6 @@ function handleSubmit() {
     font-size: 1.2rem;
     line-height: 1.8;
     margin: 0 auto;
-  }
-  &__actions {
-    display: flex;
-    gap: 1rem;
-    margin-top: 3rem;
-    flex-wrap: wrap;
   }
 }
 .areas__grid {
@@ -210,15 +203,9 @@ function handleSubmit() {
   }
   &--esg {
     border: 2px solid rgb(1, 140, 1);
-    &:hover {
-      border-color: var(--esg);
-    }
   }
   &--dual {
     border: 2px solid rgb(252, 156, 66);
-    &:hover {
-      border-color: var(--dual);
-    }
   }
 }
 .cta {
@@ -239,13 +226,6 @@ function handleSubmit() {
     line-height: 1.7;
   }
 }
-.btn {
-  display: inline-block;
-  padding: 0.9rem 1.5rem;
-  border-radius: 12px;
-  font-weight: 600;
-  text-decoration: none;
-}
 .btn--primary {
   padding: 16px 32px;
   border: 2px solid rgba(0, 160, 0, 0.531);
@@ -259,7 +239,7 @@ function handleSubmit() {
   );
   color: #fff;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
