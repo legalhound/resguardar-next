@@ -14,7 +14,7 @@
 
     <section class="areas">
       <div class="container areas__grid">
-        <NuxtLink to="https://resguardar.ai/" target="_blank" class="card card--esg">
+        <NuxtLink to="https://esg.resguardar.ai/" target="_blank" class="card card--esg">
           <!-- <NuxtLink to="/esg" class="card card--esg"> -->
           <img src="/images/logo-resguardar.png" alt="Logo" />
           <h2>ESG & Tokenización</h2>
