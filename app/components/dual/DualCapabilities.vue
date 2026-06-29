@@ -16,7 +16,6 @@
           </span>
         </div>
       </div>
-
       <!-- Tabla -->
       <div class="cap-grid">
         <div v-for="cap in caps" :key="cap.label" class="cap-item">

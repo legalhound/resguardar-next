@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   modules: [
     ['nuxt-mail', {
       message: {
-        to: 'guillermo.molini@wavecrafters.com',
+        to: 'eporras@resguardar.ai',
       },
       smtp: {
         host: 'smtp.postmarkapp.com',

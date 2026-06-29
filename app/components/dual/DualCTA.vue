@@ -17,7 +17,7 @@
         <div class="form-row">
           <div class="form-field">
             <label for="nombre">Nombre</label>
-            <input id="nombre" v-model="form.nombre" type="text" placeholder="Ana García" required />
+            <input id="nombre" v-model="form.nombre" type="text" placeholder="Nombre" required />
           </div>
           <div class="form-field">
             <label for="empresa">Empresa</label>
@@ -27,7 +27,7 @@
 
         <div class="form-field">
           <label for="email">Email</label>
-          <input id="email" v-model="form.email" type="email" placeholder="ana@empresa.com" required />
+          <input id="email" v-model="form.email" type="email" placeholder="email@empresa.com" required />
         </div>
 
         <div class="form-field">

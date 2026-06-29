@@ -32,10 +32,10 @@
 
         <!-- Fila inferior: Sosteval + Valdesc -->
         <div class="proj-row">
-
+          <NuxtLink to="https://www.sosteval.com/" target="_blank">
           <article class="proj-card">
             <div class="proj-image">
-              <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80" alt="Sosteval" loading="lazy" />
+              <img src="/images/sosteval.jpg" alt="Sosteval" loading="lazy" />
               <div class="proj-image__overlay" />
               <span class="proj-tag">ESG</span>
             </div>
@@ -49,24 +49,25 @@
               </div>
             </div>
           </article>
-
-          <article class="proj-card">
-            <div class="proj-image">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Valdesc" loading="lazy" />
-              <div class="proj-image__overlay" />
-              <span class="proj-tag">Analítica</span>
-            </div>
-            <div class="proj-body">
-              <div class="proj-icon">
-                <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true" />
+          </NuxtLink> 
+          <NuxtLink to="https://proyectovaldesc.com/es/" target="_blank">
+            <article class="proj-card">
+              <div class="proj-image">
+                <img src="/images/valdesc.jpg" alt="Valdesc" loading="lazy" />
+                <div class="proj-image__overlay" />
+                <span class="proj-tag">Analítica</span>
               </div>
-              <div>
-                <h3>Valdesc</h3>
-                <p>Valoración, análisis y optimización de procesos complejos y cadenas de valor.</p>
+              <div class="proj-body">
+                <div class="proj-icon">
+                  <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true" />
+                </div>
+                <div>
+                  <h3>Valdesc</h3>
+                  <p>Valoración, análisis y optimización de procesos complejos y cadenas de valor.</p>
+                </div>
               </div>
-            </div>
-          </article>
-
+            </article>
+</NuxtLink> 
         </div>
 
       </div>
@@ -79,8 +80,6 @@ const wingmanRows = [
   ['IA / LLM (modelos de lenguaje)',        'AI Assistant ESG, análisis documental, generación de informes, RAG normativo'],
   ['Visión artificial + CUDA C paralelo sobre GPU', 'Detección de objetos y anomalías en infraestructuras mediante drones'],
   ['Fotogrametría, modelos neuronales',      'Gemelos digitales de activos e infraestructuras desde vídeo de dron'],
-  ['Blockchain BSV + protocolo STAS',        'Registro inmutable de datos ESG, certificación verificable, tokenización'],
-  ['EBSI / W3C Verifiable Credentials',      'Credenciales verificables de certificación ESG para el ecosistema europeo'],
   ['Automatización robótica (UGV/USV/drones)', 'Recogida de datos en campo, inspección de activos, batimetría fluvial'],
   ['Impresión 3D de estructuras funcionales', 'Prototipos rápidos de plataformas físicas a coste marginal muy bajo'],
   ['Procesamiento de datos en tiempo real',  'Control Tower ESG, alertas automáticas, integración con sistemas de obra'],
@@ -94,8 +93,6 @@ const wingmanRows = [
   gap: 1.25rem;
   margin-top: 2.5rem;
 }
-
-/* ── Fila inferior ── */
 .proj-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -106,7 +103,6 @@ const wingmanRows = [
   .proj-row { grid-template-columns: 1fr; }
 }
 
-/* ── Card base ── */
 .proj-card {
   background: var(--surface);
   border: 0.5px solid var(--border);
@@ -120,7 +116,6 @@ const wingmanRows = [
   }
 }
 
-/* ── Card featured: Wingman ── */
 .proj-card--featured {
   transform: none;
 
@@ -241,6 +236,7 @@ const wingmanRows = [
   align-items: flex-start;
   gap: 1rem;
   padding: 1.25rem;
+  height: 100px;
 }
 
 .proj-icon {
